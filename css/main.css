@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-.main-background{
-    background-image: url(./images/hiroko-yoshii-9y7y26C-l4Y-unsplash.jpg);
+.accordion-body{
+    background-image: url(../images/hiroko-yoshii-9y7y26C-l4Y-unsplash.jpg);
     background-size: cover;
     color: white;
 }
@@ -19,4 +19,14 @@
     margin: 100px auto;
     padding: 20px;
     border-radius: 10px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+.nav-sub{
+    display: none;
 }
