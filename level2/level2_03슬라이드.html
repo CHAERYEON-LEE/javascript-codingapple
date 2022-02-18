@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        .left-menu{
+            width: 150px;
+            height: 100%;
+            background: black;
+            color: white;
+            position: fixed;
+            margin-left: -150px;
+        }
+        .modal{
+            width: 50%;
+            height: 500px;
+            margin: 0 auto;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -560px;
+        }
+        .inner_modal{
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+            background: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">Logo</div>
+    <div class="left-menu">
+        <p>Menu Title</p>
+    </div>
+
+    <div class="click_modal">Modal</div>
+    <div class="modal">
+        <div class="inner_modal">
+            <p>이것은 모달창입니다.</p>
+        </div>
+    </div>
+
+    <script>
+        $('.logo').click(function(){
+            $('.left-menu').animate({marginLeft : '0px'});
+        });
+
+        $('.click_modal').click(function(){
+            $('.modal').animate({marginTop : '0px'});
+        });
+    </script>
+</body>
+</html>
