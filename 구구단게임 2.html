@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단게임</title>
+</head>
+<body>
+    <!-- 숫자를 넣었을 때 
+             박수를 쳐야할 지 말아야 할 지 판단해주는 함수 
+             3의 배수일때는 박수 
+             9의 배수일때는 박수 두번 
+            그 이외는 통과 -->
+
+
+    <script>
+        function 삼육구게임(e){
+            if(e % 9 == 0 ){
+                console.log('박수X2');
+            }else if(e % 3 == 0){
+                console.log('박수');
+            }else{
+                console.log('통과');
+            }
+        };
+        
+        삼육구게임(3);
+        삼육구게임(6);
+        삼육구게임(9);
+        삼육구게임(11);
+        삼육구게임(18);
+        삼육구게임(13);
+        삼육구게임(271);
+        삼육구게임(270);
+        삼육구게임(592);
+    </script>
+</body>
+</html>
