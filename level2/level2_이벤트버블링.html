@@ -32,20 +32,30 @@
         }
         .nav-sub {
             display: none;
-    }
+        }
+        .btn-position{
+            position: absolute;
+            top: 100px;
+        }
 </style>
 </head>
 
 <body>
-    <div class="modal" tabindex="-1">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-position" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    ...
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -54,12 +64,10 @@
             </div>
         </div>
     </div>
-
     <div class="nav-menu">
         <h4>Shirts studio</h4>
         <a>Products</a>
     </div>
-    
     <ul class="list-group nav-sub">
         <li class="list-group-item">Outer</li>
         <li class="list-group-item">Shirts</li>
@@ -68,7 +76,7 @@
         <li class="list-group-item">Cap</li>
     </ul>
     
-
+    
     <img src="./images/aesop1.jpg" alt="">
     <img src="./images/aesop2.jpg" alt="">
     <img src="./images/aesop3.jpg" alt="">
