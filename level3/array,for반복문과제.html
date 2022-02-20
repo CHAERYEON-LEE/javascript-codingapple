@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 자료형, for반복문 실력향상과제</title>
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        var 출석부 = ['흥민', '영희', '철수', '재석'];
+
+
+        // function 이름찾기(이름){
+        //     // 함수안에 이름을 집어넣으면 출석부 안에 이름이 있는지 없는지 알려주는 함수. 
+        //     if(  출석부[0] == 이름 ){
+        //         console.log('있어요');
+        //     }
+        //     if(  출석부[1] == 이름 ){
+        //         console.log('있어요');
+        //     }
+        //     if(  출석부[2] == 이름 ){
+        //         console.log('있어요');
+        //     }
+        //     if(  출석부[3] == 이름 ){
+        //         console.log('있어요');
+        //     }
+        // };
+        
+        function 이름찾기(이름) {
+            for (var i = 0; i < 출석부.length; i++) {
+                if(  출석부[i] == 이름 ){
+                    console.log('있어요');
+                    return;
+                }
+            }
+        }
+
+        이름찾기('철수');
+        이름찾기('채련');
+        이름찾기('영희');
+        이름찾기('채련');
+        이름찾기('흥민');
+
+    </script>
+</body>
+</html>

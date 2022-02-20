@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 자료형, for반복문 실력향상과제</title>
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        
+        //7~11월 판매실적 
+        //평균 월 목표 판매량
+        //12월 목표 실적 계산해주는 함수. 
+
+        let 판매실적어레이 = [10,20,30,40,50];
+        let 평균월별판매량 = 35;
+
+
+        function 목표량계산기(판매실적어레이, 평균월별판매량){
+            var 실적5개월 = 0;
+
+            for(var i = 0; i<5; i++){
+                실적5개월 = 실적5개월 + 판매실적어레이[i];
+            }
+
+            var 실적12월 = 6*평균월별판매량 - 실적5개월;
+            console.log(실적12월);
+        }
+
+        // 판매실적합계 = 0;
+        // 판매실적어레이.forEach(function(i){
+        //     판매실적합계 += i;
+        // });
+
+        // console.log(판매실적합계);
+
+        목표량계산기([5,6,4,7,8],10);
+        
+    </script>
+</body>
+</html>
