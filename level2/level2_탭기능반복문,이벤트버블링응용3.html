@@ -47,9 +47,9 @@
 <body>
     <div class="container mt-5">
         <ul class="list">
-            <li class="tab-button">Products</li>
-            <li class="tab-button">Information</li>
-            <li class="tab-button">Shipping</li>
+            <li class="tab-button" data-id = "0">Products</li>
+            <li class="tab-button" data-id = "1">Information</li>
+            <li class="tab-button" data-id = "2">Shipping</li>
         </ul>
     
         <div class="tab-content">
@@ -67,13 +67,22 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
 
-        for (let i = 0; i < $('.tab-button').length; i++) {
-            $('.tab-button').eq(i).click(function () {
-                $('.tab-content').removeClass('show');
-                $('.tab-button').removeClass('active');
-                $('.tab-content').eq(i).addClass('show');
-                $('.tab-button').eq(i).addClass('active');
-            });
+      // jQuery형식으로 데이터 저장하는법
+
+      // $('.list').data('작명','값');
+      // $('.list').data('작명');  -> "값" 이 출력됨! 
+
+        $('.list').click(function(e){
+          // 탭열기(내가누른버튼에숨겨져있던숫자)
+          탭열기(e.target.dataset.id)
+
+        });
+
+        function 탭열기(숫자){
+          $('.tab-content').removeClass('show');
+          $('.tab-button').removeClass('active');
+          $('.tab-content').eq(숫자).addClass('show');
+          $('.tab-button').eq(숫자).addClass('active');
         }
     </script>
     </body>
