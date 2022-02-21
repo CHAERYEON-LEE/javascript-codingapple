@@ -13,36 +13,14 @@
 
 <body>
     <div class="card-group container">
-        <div class="card">
-            <img src="https://via.placeholder.com/600">
-            <div class="card-body">
-                <h5>Card title</h5>
-                <p>가격 : 70000</p>
-                <button class="btn btn-danger">주문하기</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/600">
-            <div class="card-body">
-                <h5>Card title</h5>
-                <p>가격 : 70000</p>
-                <button class="btn btn-danger">주문하기</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/600">
-            <div class="card-body">
-                <h5>Card title</h5>
-                <p>가격 : 70000</p>
-                <button class="btn btn-danger">주문하기</button>
-            </div>
-        </div>
+        
     </div>
 
     <div class="container my-4">
         <button class="btn btn-danger" id="sortPrice">가격순정렬</button>
-        <button class="btn btn-primary" id="abc">가나다순정렬</button>
-        <button class="btn btn-primary" id="filterPrice">5만원 이하 보기</button>
+    </div>
+    <div class="container my-4">
+        <button class="btn btn-danger" id="filterPrice">5만원 이하 보기</button>
     </div>
 
 
@@ -82,17 +60,26 @@
             titleUpload(products);
         });
 
-        $('#abc').click(function(){
-            products.sort(function(a,b){
-                if( a.title < b.title == true){
-                    return -1
-                } else{
-                    return 1
-                }
-            });
-            priceUpload(products);
-            titleUpload(products);
+        var 필터 = products.filter(function (a) {
+                return a.price <= 50000;
         });
+        
+        var 템플릿 = `<div class="card">
+            <img src="https://via.placeholder.com/600">
+            <div class="card-body">
+                <h5>Card title</h5>
+                <p>가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+            </div>
+        </div>`
+
+        $('#filterPrice').click(function(){
+            필터;
+            $('.container').html(템플릿);
+        })
+    
+
+
     </script>
 
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <h4 id="hello">임시글씨</h4>
+
+    서버 : 접속자가 요청을 하면 데이터를 갖다줌
+    요청 : 
+    GET : url을 입력해서 요청함 (request종류 중 한개),(읽기)
+    POST : 숨겨서 뭔가 정보를 전달하거나 요청함 (쓰기)
+
+    AJAX : 서버에다가 GET/POST 요청을 할 수 있게 도와주는데 새로고침없이 요청할 수 있음. 
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+        $.ajax({
+            url : 'https://codingapple1.github.io/hello.txt',
+            type : 'GET'
+        }).done(function(데이터){
+            console.log(데이터)
+        });
+
+    </script>
+</body>
+</html>
