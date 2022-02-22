@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hello, world!</title>
+</head>
+<body>
+    
+    <div class="card-background">
+        <div class="card-box">
+            <img src="./image/card1.png" alt="">
+        </div>
+        <div class="card-box">
+            <img src="./image/card2.png" alt="">
+        </div>
+        <div class="card-box">
+            <img src="./image/card3.png" alt="">
+        </div>
+    </div>
+
+
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var 높이 = $(window).scrollTop();
+            console.log(높이);
+            // 650~1150까지 스크롤바를 내리면,
+            // 첫째카드의 opacity 1~0으로 서서히 변경해주세요
+            //일차함수로 기울기값을 구하는 공식 ax + b = y 이용하기
+            var y = (-1/500) * 높이 + 115/50;
+            $('.card-box').eq(0).css('opacity', y);
+            // $('.card-box').eq(0).css('transform','translate(90%)', y);
+        });
+
+        $(window).scroll(function(){
+            var 높이 = $(window).scrollTop();
+            var y = (-1/5000) * 높이 + 565/500;
+            $('.card-box>img').eq(0).css('transform', 'scale('+y+')');
+        });
+
+
+        $(window).scroll(function(){
+            var 높이 = $(window).scrollTop();
+            var y = (-1/400) * 높이 + 1750/400;
+            $('.card-box').eq(1).css('opacity', y);
+        });
+        
+        $(window).scroll(function(){
+            var 높이 = $(window).scrollTop();
+            var y = (-1/4000) * 높이 + 5350/4000;
+            $('.card-box>img').eq(1).css('transform', 'scale('+y+')');
+        });
+
+    </script>
+</body>
+</html>
