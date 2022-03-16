@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>369게임 upgrade</title>
+</head>
+<body>
+    <script>
+
+        function 삼육구게임(숫자){
+            if(숫자%9 == 0){
+                console.log('박수X2');
+            }else if(숫자%3 == 0){
+                console.log('박수');
+            }else{
+                console.log('통과');
+            }
+        };
+
+        삼육구게임(6);
+        삼육구게임(9);
+        삼육구게임(11);
+        삼육구게임(21);
+        삼육구게임(18);
+
+    </script>
+</body>
+</html>
